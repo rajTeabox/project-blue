@@ -109,6 +109,14 @@
 		font-family: proximaNovaSemiBold;
 		color: #707070 !important;
 	}
+	.featured-list ul li a{
+		font-size: 18px;
+		font-family: proximaNovaSemiBold;
+		color: #707070 !important;
+	}
+	#featured-list ul li a{
+		padding-top: 10px !important;
+	}
 	.contact-cta{
 		background-image: linear-gradient(to left, #2024e3, #1e25ca, #1e24b1, #1e2399, #1f2181);
 		border-radius: 4px;
@@ -186,6 +194,46 @@
 	.cta_icon{
 		width: 20%;
 		vertical-align: text-top;
+	}
+	.featured-work-space{
+		padding-top: 50px;
+	}
+	.feature-work-banners{
+		padding-top: 20px;
+	}
+	.active-slider{
+		border-bottom: 2px solid #1F2181;
+		color: #1F2181 !important;
+	}
+	.our-service{
+		padding-top: 50px;
+	}
+	.service-head{
+		padding-bottom: 30px;
+	}
+	.service{
+		border: 1px solid #D9D9D9;
+		height: 230px;
+		margin-top: 25px;
+	}
+	.service:hover {
+		cursor: pointer;
+		box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
+	}
+	.service_title{
+		font-size: 18px;
+		font-family: proximaNovaBold;
+		color: #1F2181;
+	}
+	.service_title{
+		padding-top: 25px;
+	}
+	.contact-text{
+		font-size: 16px;
+		font-family: Helvetica Neue;
+		color: #707070;
+		padding-top: 15px;
+		padding-bottom: 10px;
 	}
 /*End Desktop Css*/
 
@@ -293,6 +341,32 @@
 	#welcome-banner{
 		display: none !important;
 	}
+	.hr-line{
+		display: none;
+	}
+	#featured-list{
+		overflow: scroll;
+	}
+	#work-space-scroll{
+		width: 500px;
+		justify-content: flex-start !important;
+	}
+	.slick-slide {
+	  margin: 0px 0px !important;
+	}
+	.service{
+		height: 260px;
+		margin-top: 0px;
+		padding-top: 20px;
+	}
+	.service img{
+		width: 30% !important;
+	} 
+	.slick-slide img{
+		display: inline-block !important;
+	}
+
+
 
 	
 
@@ -337,9 +411,69 @@
 	.learn-more{
 		padding-top: 20px;
 	}
+	#featured-list ul li a{
+		font-size: 18px;
+		padding-top: 5px !important;
+	}
+	#featured-list{
+		overflow: scroll;
+	}
+	#work-space-scroll{
+		width: 525px;
+	}
+	.contact-text{
+		font-size: 12px;
+	}
+	.service img{
+		width: 55% !important;
+	} 
+	
+
+}
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.service{
+		height: 260px;
+		margin-top: 20px;
+	}
 }
 /*End Ipad Css*/
 
-@media only screen and (max-width: 760px) {
-    
+@media only screen and (min-width: 992px) {
+    .banner-cnt {
+	    position: absolute;
+	    top: 50%;
+	    margin: auto;
+	    transform: translate(5%,-50%);
+	}
 }
+
+/*slicker css*/
+.slider {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.slick-slide {
+  margin: -18px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+  transform: scale(0.95);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+}
+
+.slick-dotted .slick-current img {
+  transform: scale(1.1);
+}
+
