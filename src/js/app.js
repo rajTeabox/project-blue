@@ -150,9 +150,14 @@ $("a.header-hover-feature").click(function(e) {
         alertify.error('Please check your entries');
         return false;
       } else {
+      	/*  URL has to be integrated with their account
+		   Steps To Follow
+		   https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server */
+
+      	var url = 'https://script.google.com/macros/s/AKfycbwYJPQFoX9FfWncNibnGDYj2nf0EoYqnTDM_0b5Nw/exec';
         $.ajax({
           method: 'POST',
-          url: 'https://formspree.io/b.rajareddy1903@gmail.com',
+          url: url,
           data: $('#contact-form').serialize(),
           datatype: 'json'
         });
