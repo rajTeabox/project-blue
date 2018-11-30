@@ -108,7 +108,7 @@
 	    top: 0;
 	    background: white;
 	    z-index: 9999;
-	    border-bottom: .5px solid #1e24b1;
+	    border-bottom: .5px solid #ededed;
 	}
 	.desk-nav{
 		padding: 12px 0px;
@@ -711,6 +711,12 @@
 	.Mob-relative{
 		position: relative;
 	}
+	.banner-cnt-about{
+		width: 90% !important;
+	}
+	.banner-header-title{
+		font-size: 42px;
+	}
 
 
 
@@ -819,8 +825,15 @@
 }
 /*End Ipad Css*/
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1500px) {
     
+}
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .banner-cnt-index{
+    	width: 80% !important;
+    }
 }
 @media only screen and (max-width: 1300px) {
     .banner-cnt-index{
@@ -829,8 +842,23 @@
 }
 @media only screen and (min-width: 1400px) {
     .banner-cnt-index{
-    	width: 75% !important;
+    	width: 76% !important;
+    	padding: 0px !important;
     }
+}
+@media
+not screen and (-webkit-min-device-pixel-ratio: 2),
+not screen and (   min--moz-device-pixel-ratio: 2),
+not screen and (     -o-min-device-pixel-ratio: 2/1),
+not screen and (        min-device-pixel-ratio: 2),
+not screen and (                min-resolution: 192dpi),
+not screen and (                min-resolution: 2dppx) { 
+
+  .banner-cnt-index{
+    	width: 76% !important;
+    	padding: 0px 15px !important;
+    }
+
 }
 
 /*slicker css*/
