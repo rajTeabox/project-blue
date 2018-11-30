@@ -35,7 +35,7 @@ $(document).on('ready', function() {
 	  ]
 	});
   // testimonial slider
-  $('.testimonials').slick({
+  $('.testimonials,.banner-slick').slick({
   	  dots:true,
   	  arrows: false,
 	  centerMode: true,
@@ -69,8 +69,6 @@ $(document).on('ready', function() {
 
   $('a[data-slide]').click(function(e) {
    e.preventDefault();
-   $('a[data-slide]').removeClass("active-slider");
-   $(this).addClass("active-slider");
    var slideno = $(this).data('slide');
    $('.center').slick('slickGoTo', slideno - 1);
  });
@@ -103,13 +101,66 @@ $(document).on('ready', function() {
 $(".feature_header").click(function(){
 	closeNav();
   $('html, body').animate({
-   scrollTop: $(".featured-work-space").offset().top
+   scrollTop: $(".featured-work-space").offset().top - 80
  }, 500);
 });
 
 $(".service_header").click(function(){
 	closeNav();
   $('html, body').animate({
-   scrollTop: $(".our-service").offset().top
+   scrollTop: $(".our-service").offset().top - 80
  }, 500);
 });
+
+$(".Contact_Us").click(function(){
+	$("a").removeClass('active-item');
+	closeNav();
+  $('html, body').animate({
+   scrollTop: $(".lets-talk").offset().top - 80
+ }, 500);
+});
+
+$(".scroll-team").click(function(){
+	closeNav();
+  $('html, body').animate({
+   scrollTop: $(".our-team").offset().top - 80
+ }, 500);
+});
+
+$("a.header-hover").click(function(e) {
+	$("a").removeClass('active-item');
+	$(this).addClass('active-item');
+});
+
+$("a.header-hover-feature").click(function(e) {
+	$("a").removeClass('active-item-feture');
+	$(this).addClass('active-item-feture');
+});
+
+(function() {
+  $(document).ready(function() {
+    return $('#contact-form').submit(function(e) {
+    	debugger;
+      var email, message, name, phone;
+      name = document.getElementById('inputName');
+      email = document.getElementById('inputEmail');
+      phone = document.getElementById('inputPhone');
+      message = document.getElementById('inputMessage');
+      if (!name.value || !email.value || !phone.value) {
+        alertify.error('Please check your entries');
+        return false;
+      } else {
+        $.ajax({
+          method: 'POST',
+          url: 'https://formspree.io/b.rajareddy1903@gmail.com',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        return alertify.success('Message sent');
+      }
+    });
+  });
+
+}).call(this);

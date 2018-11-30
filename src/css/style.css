@@ -79,6 +79,9 @@
 		background-image: linear-gradient(to left, #1f2181, #1b1d70, #171960, #131550, #101141);
 		height: 50px;
 	}
+	.header-desktop a:hover{
+		opacity: 0.7;
+	}
 	.Home_icon{
 		width: 14px;
 		vertical-align: inherit;
@@ -100,6 +103,12 @@
 	}
 	.logo-header{
 		height: 100px;
+		position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+	    background: white;
+	    z-index: 9999;
+	    border-bottom: .5px solid #1e24b1;
 	}
 	.desk-nav{
 		padding: 12px 0px;
@@ -112,7 +121,7 @@
 	.featured-list ul li a{
 		font-size: 18px;
 		font-family: proximaNovaSemiBold;
-		color: #707070 !important;
+		color: #707070;
 	}
 	#featured-list ul li a{
 		padding-top: 10px !important;
@@ -145,14 +154,14 @@
 		font-size: 52px;
 		font-family: proximaNovaBold;
 		color: white;
-		width: 380px;
+		/*width: 380px;*/
 	}
 	.banner-sub-text{
 		font-family: proximaNovaRegular;
 		font-size: 16px;
 		color: white;
 		opacity: 0.8;
-		width: 380px;
+		width: 36%;
 	}
 	.banner-cta{
 		color: white !important;
@@ -204,11 +213,12 @@
 	.active-slider{
 		border-bottom: 2px solid #1F2181;
 		color: #1F2181 !important;
+		font-family: proximaNovaSemiBold;
 	}
-	.our-service,.customer_say{
+	.our-service,.customer_say,.blue-footer,.our-team{
 		padding-top: 70px;
 	}
-	.lets-talk {
+	.lets-talk,.our-mission {
 	    padding-top: 45px;
 	}
 	.service-head{
@@ -274,6 +284,9 @@
 	.contact-cnt{
 		position: absolute;
 		left: 20%;
+	}
+	.lets-qualify{
+		padding-left: 16px;
 	}
 	.lets-qualify ul li{
 		font-family: proximaNovaRegular;
@@ -341,6 +354,151 @@
 	.contact-form{
 		margin: 0 auto;
 	}
+	.trusted-list{
+		background: #3B3B3B;
+	}
+	.mobile_overflow{
+		padding: 40px 0px;
+	}
+	.trusted_img{
+		width: 90%;
+	}
+	.mobile_overflow div{
+		display: inline-block !important;
+		padding: 0px 10px;
+	}
+	.About-link{
+		border-bottom: 4px solid #1F2181;
+		padding-bottom: 23px !important;
+	}
+	.Video_Play{
+		width: 7%;
+	}
+	.banner-header-title{
+		font-size: 52px;
+	    font-family: proximaNovaBold;
+	    color: white;
+	    text-align: center;
+	}
+	.banner-sub-desc {
+	    font-family: proximaNovaRegular;
+	    font-size: 16px;
+	    color: white;
+	    opacity: 0.8;
+	    text-align: center;
+	}
+	.about-list{
+		box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
+		height: 100px;
+		padding-top: 44px;
+	    margin-top: -50px;
+	    position: relative;
+	    background: white;
+	}
+	.about-list div{
+		display: inline-block !important;
+	}
+	.who-we{
+		color: #707070 !important;
+		font-family: proximaNovaSemiBold !important;
+		font-size: 16px;
+	}	
+	.about-list ul li a{
+		margin: 0 10px !important;
+		
+		padding: 0px !important;
+		padding-bottom: 30px !important;
+	}
+	.missin-cnt div{
+		padding: 15px 20%;
+		color: #707070;
+		font-family: Helvetica Neue Regular;
+	}
+	.founders-img{
+		width: 60%;
+	}
+	.company-founders{
+		padding: 70px 15% 20px 15%;
+	}
+	.founder-name{
+		font-size: 20px;
+		font-family: proximaNovaBold;
+		padding: 20px 0px 0px 0px;
+
+	}
+	.founder-designation{
+		font-family: proximaNovaRegular;
+		font-size: 14px;
+		padding: 0px 0px 10px 0px;
+	}
+	.linkImg{
+		width: 20%;
+	}
+	.still-think{
+		padding-top: 30px;
+	}
+	.about-footer{
+		border: 1px solid #707070;
+		padding: 30px 30px;
+	}
+	.footer-title-style{
+		font-family: proximaNovaSemiBold;
+		font-size: 32px;
+	}
+	.footer-title-style strong{
+		font-family: proximaNovaBold;
+	}
+	.fotter-cent{
+		font-size: 16px;
+		font-family: proximaNovaRegular;
+		color: #707070;
+	}
+	.Contact_Cta{
+		color:white;
+		font-size: 16px;
+	    font-family: proximaNovaSemiBold;
+	    width: 240px;
+	    text-align: center;
+	}
+	.justify_content{
+		justify-content: flex-end !important;
+	}
+	.header-hover:hover {
+		color: #1F2181 !important;
+	}
+	.active-item{
+		border-bottom: 4px solid #1F2181 !important;
+		color: #1F2181 !important;
+		padding-bottom: 23px !important;
+	}
+	.active-item-feture{
+		border-bottom: 2px solid #1F2181 !important;
+		color: #1F2181 !important;
+	}
+	.header-hover-feature:hover {
+		color: #1F2181 !important;
+	}
+	.banner-cnt-about{
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    z-index: 2;
+	    width: 80% !important;
+	    padding: 20px;
+	    text-align: center;
+	}
+	.banner-cnt-index{
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    z-index: 2;
+	    width: 75% !important;
+	    text-align: left;
+	    padding: 0px 15px;
+	}
+
 /*End Desktop Css*/
 
 
@@ -499,6 +657,60 @@
 		position: relative !important;
 		left: 0px !important;
 	}
+	.lets-talk {
+	    padding-top: 65px;
+	}
+	.mob_ver{
+		overflow: scroll;
+	}
+	.mobile_overflow{
+		width: 1200px;
+	}
+	.mobile_overflow div{
+		display: inline-block !important;
+	}
+	.trusted_img{
+		width: 90%;
+	}
+	.missin-cnt div{
+		padding: 12px 10%;
+	}
+	.service-head {
+	    padding-bottom: 15px;
+	}
+	.our-team {
+	    padding-top: 50px;
+	}
+	#team_image{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	.founders-img{
+		width: 70%;
+	}
+	.about-footer{
+		border: none;
+	}
+	.footer-title-style {
+	    font-family: proximaNovaRegular;
+	    font-size: 32px;
+	    text-align: center;
+	}
+	.fotter-cent{
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.justify_content{
+		justify-content: center !important;
+	}
+	.banner-cnt-index{
+		width: 100% !important;
+		text-align: center;
+		z-index: 999;
+	}
+	.Mob-relative{
+		position: relative;
+	}
 
 
 
@@ -564,7 +776,27 @@
 	.say-text{
 		margin-top: -50px;
 	}
-	
+	.mob_ver{
+		overflow: scroll;
+	}
+	.mobile_overflow{
+		width: 1200px;
+	}
+	.founders-img{
+		width: 70%;
+	}
+	.Video_Play{
+		width: 8%;
+	}
+	.banner-cnt-index{
+		width: 95% !important;
+	}
+	.banner-sub-text{
+		font-size: 15px;
+	}
+	.banner-header-text{
+		font-size: 32px;
+	}
 
 }
 /* ----------- iPad Pro 10.5" ----------- */
@@ -578,24 +810,27 @@
 		height: 260px;
 		margin-top: 20px;
 	}
+	.mob_ver{
+		overflow: scroll;
+	}
+	.mobile_overflow{
+		width: 1200px;
+	}
 }
 /*End Ipad Css*/
 
 @media only screen and (min-width: 992px) {
-    .banner-cnt {
-	    position: absolute;
-	    top: 50%;
-	    margin: auto;
-	    transform: translate(5%,-50%);
-	}
+    
 }
-@media only screen and (min-width: 1084px) {
-    .banner-cnt {
-	    position: absolute;
-	    top: 50%;
-	    margin: auto;
-	    transform: translate(17%,-50%);
-	}
+@media only screen and (max-width: 1300px) {
+    .banner-cnt-index{
+    	width: 90% !important;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .banner-cnt-index{
+    	width: 75% !important;
+    }
 }
 
 /*slicker css*/
@@ -626,5 +861,24 @@
 }
 .testimonials .slick-slide {
   margin: -18px 0px !important;
+}
+.Banner-desk .slick-dots{
+	bottom: 20px !important;
+}
+.Banner-desk .slick-dots li button{
+	background: white !important;
+	border: 1px solid #ededed;
+}
+.Banner-desk .slick-dotted.slick-slider{
+	margin-bottom: 0px !important;
+}
+.Banner-desk .slick-slide{
+	margin: 0px !important;
+}
+.Banner-desk .contact-cnt{
+	left: 13.5%;
+}
+.Banner-desk .slick-dotted .slick-current img {
+    transform: scale(1);
 }
 

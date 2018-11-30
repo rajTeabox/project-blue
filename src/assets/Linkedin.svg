@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #2024e3;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        filter: url(#Ellipse_14);
+      }
+    </style>
+    <filter id="Ellipse_14" x="0" y="0" width="46" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_46" data-name="Group 46" transform="translate(-212 -2277)">
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, 212, 2277)">
+      <g id="Ellipse_14-2" data-name="Ellipse 14" class="cls-1" transform="translate(9 6)">
+        <circle class="cls-2" cx="14" cy="14" r="14"/>
+        <circle class="cls-3" cx="14" cy="14" r="13.5"/>
+      </g>
+    </g>
+    <g id="_34227" data-name="34227" transform="translate(230 2280.154)">
+      <path id="LinkedIn" d="M12.117,16.657v4.48H9.52v-4.18c0-1.05-.376-1.767-1.316-1.767a1.421,1.421,0,0,0-1.333.95,1.777,1.777,0,0,0-.086.633v4.363h-2.6s.035-7.079,0-7.813h2.6v1.107l-.017.025h.017v-.025A2.579,2.579,0,0,1,9.126,13.14C10.836,13.14,12.117,14.257,12.117,16.657ZM1.47,9.558a1.354,1.354,0,1,0-.034,2.7h.017a1.354,1.354,0,1,0,.017-2.7ZM.154,21.137h2.6V13.324H.154Z"/>
+    </g>
+  </g>
+</svg>
