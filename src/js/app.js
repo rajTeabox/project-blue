@@ -6,7 +6,31 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+function contactCta(){
+	$("a").removeClass('active-item');
+	closeNav();
+  $('html, body').animate({
+   scrollTop: $(".lets-talk").offset().top - 80
+ }, 500);
+}
+
 $(document).on('ready', function() {
+	$(".Video_Play").click(function(){
+		$(".over-lay").show();
+		$("iframe").show();
+	});
+	$(".over-lay").click(function(){
+		$('.youtube-iframe').each(function(index) {
+	        $(this).attr('src', $(this).attr('src'));
+	        return false;
+	      });
+		$(".over-lay").hide();
+		$("iframe").hide();
+	});
+	$('iframe[src*="https://www.youtube.com/embed/"]').addClass("youtube-iframe");
+
+   
+
   $('.center').slick({
   	  dots:true,
 	  centerMode: true,
@@ -154,7 +178,7 @@ $("a.header-hover-feature").click(function(e) {
 		   Steps To Follow
 		   https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server */
 
-      	var url = 'https://script.google.com/macros/s/AKfycbwYJPQFoX9FfWncNibnGDYj2nf0EoYqnTDM_0b5Nw/exec';
+      	var url = 'https://script.google.com/macros/s/AKfycbz7PiiVSglLHRK66p58obztlWAIHuaWEyOLQ4GgQw/exec';
         $.ajax({
           method: 'POST',
           url: url,
@@ -169,3 +193,51 @@ $("a.header-hover-feature").click(function(e) {
   });
 
 }).call(this);
+
+
+var sections = $('.tab-active-scroll')
+  , nav = $('.logo-header')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active-item');
+      sections.removeClass('active-item');
+
+      var cta = $(this).attr('id');
+      if(cta == 'lets-connect'){
+      }else{
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active-item');
+      }
+    }
+  });
+});
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+    } else {
+        $("a").removeClass('active-item');
+    }
+    
+
+});
+
+

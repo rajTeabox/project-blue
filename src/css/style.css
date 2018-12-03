@@ -108,7 +108,7 @@
 	    top: 0;
 	    background: white;
 	    z-index: 9999;
-	    border-bottom: .5px solid #ededed;
+	    box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
 	}
 	.desk-nav{
 		padding: 12px 0px;
@@ -116,7 +116,7 @@
 	.desk-nav ul li a{
 		font-size: 16px;
 		font-family: proximaNovaSemiBold;
-		color: #707070 !important;
+		color: #707070;
 	}
 	.featured-list ul li a{
 		font-size: 18px;
@@ -226,7 +226,6 @@
 	}
 	.service{
 		border: 1px solid #D9D9D9;
-		height: 230px;
 		margin-top: 25px;
 	}
 	.service:hover {
@@ -373,6 +372,7 @@
 	}
 	.Video_Play{
 		width: 7%;
+		cursor: pointer;
 	}
 	.banner-header-title{
 		font-size: 52px;
@@ -803,6 +803,9 @@
 	.banner-header-text{
 		font-size: 32px;
 	}
+	.slick-arrow{
+		height: 190px !important;
+	}
 
 }
 /* ----------- iPad Pro 10.5" ----------- */
@@ -822,6 +825,9 @@
 	.mobile_overflow{
 		width: 1200px;
 	}
+	.slick-arrow {
+    height: 306px !important;
+}
 }
 /*End Ipad Css*/
 
@@ -873,7 +879,11 @@ not screen and (                min-resolution: 2dppx) {
 
 .slick-slide img {
   width: 100%;
-  transform: scale(0.95);
+  transform: scale(1);
+}
+#Feature-space .slick-slide img {
+  width: 100%;
+  transform: scale(1);
 }
 
 .slick-prev:before,
@@ -910,3 +920,85 @@ not screen and (                min-resolution: 2dppx) {
     transform: scale(1);
 }
 
+/*flip css*/
+.f1_container {
+  position: relative;
+  height: 260px;
+  z-index: 1;
+}
+.f1_container {
+  perspective: 1000;
+}
+.f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /*transition: all 1.0s linear;*/
+}
+.f1_container:hover .f1_card {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  background-color: white;
+}
+
+.over-lay{
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+}
+iframe{
+	position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: 99999;
+}
+.overly{
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.slick-arrow{
+	background: black;
+    opacity: 0.4;
+    width: 80px;
+    height: 395px;
+}
+.slick-prev{
+	left: 0px !important;
+}
+.slick-next{
+	right: 0px;
+}
+
+#Our-Service .slick-arrow{
+	display: none !important;
+}
+.close-pop{
+	color: #ccc !important;
+    position: absolute;
+    top: 16%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
